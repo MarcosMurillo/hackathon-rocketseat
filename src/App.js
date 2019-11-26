@@ -1,12 +1,11 @@
 import React from "react";
-import "./App.css";
 
 function App() {
   return (
     <>
-      <h1>Hackton Rocketseat</h1>
+      <h1>Hackathon Rocketseat</h1>
     </>
   );
 }
 
-export default App;
+export default App
