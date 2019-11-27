@@ -1,3 +1,10 @@
+/* 
+|
+ DEUS ME PERDOE POR ESSE CÓDIGO
+|
+*/
+
+
 /*======== LOCAL VARIABLES =========*/
 $white: rgb(255, 255, 255);
 
@@ -82,6 +89,27 @@ body {
     line-height: 3rem;
     font-weight: 700;
   }
+}
+
+.c-big-bt {
+  background: $light-orange;
+  padding: 1rem 2rem;
+  width: 300px;
+  font-size: 2rem;
+  color: $white;
+  text-transform: uppercase;
+  font-weight: 700;
+  @extend .rounded;
+  text-align: center;
+}
+
+.c-login-bt {
+  @extend .btn;
+  background: $light-orange;
+  padding: .5rem 1rem;
+  color: $white;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 // SCROLLING MENU

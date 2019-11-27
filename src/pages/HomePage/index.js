@@ -19,20 +19,26 @@ export default function HomePage() {
                 <a className="c-nav-link" href="/">Home<span className="sr-only">(página atual)</span></a>
               </li>
               <li className="nav-item">
-                <a className="c-nav-link" href="/">Quem somos</a>
+                <a className="c-nav-link" href="/">Como funciona</a>
+              </li>
+              <li className="nav-item">
+                <a className="c-nav-link" href="/">API</a>
               </li>
               <li className="nav-item">
                 <a className="c-nav-link" href="/">Contato</a>
               </li>
             </ul>
           </div>
+
+          <button class="c-login-bt mr-5">Login</button>
         </nav>
       
         <div className="container">
           <div className="row">
             <div className="c-intro d-flex flex-column justify-content-center">
               <h1 className="c-intro__tit">Aprenda. Ensine. Trabalhe.</h1>
-              <h2 className="c-intro__sub-tit">O plataforma definitiva para iniciantes e sêniors da programação.</h2>
+              <h2 className="c-intro__sub-tit mt-3">O plataforma definitiva para iniciantes até sêniors da programação.</h2>
+              <a class="c-big-bt mt-4" href="">Cadastre-se</a>
             </div>
           </div>
         </div>
