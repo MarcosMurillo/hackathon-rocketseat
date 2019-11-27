@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "gulp-watch": "^5.0.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-scripts": "3.2.0",
-    "gulp-watch": "^5.0.1"
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.2.0"
   },
   "devDependencies": {
     "browser-sync": "^2.26.5",
@@ -16,10 +17,6 @@
     "gulp-sass": "4.0.2",
     "gulp-sass-lint": "^1.4.0",
     "gulp-sequence": "^1.0.0"
-  },
-  "engines": {
-    "node": "&gt;= 10.17.0",
-    "npm": "&gt;= 6.11.3"
   },
   "scripts": {
     "start": "react-scripts start",
