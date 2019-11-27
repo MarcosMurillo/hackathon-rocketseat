@@ -147,7 +147,10 @@
       "title": "Curso de EcmaScript 6",
       "description": "Você vai aprender a utilizar as novas features do JavaScript na versão ES 2015.",
       "url": "https://rocketseat.com.br",
-      "relatedTechnologies": [{ "id": 3, "title": "JavaScript", "image": "" }],
+      "relatedTechnologies": [
+        { "id": 3, "title": "JavaScript", "image": "https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" },
+        { "id": 1, "title": "ReactJS", "image": "https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" }
+      ],
       "ratingAverage": 4.5,
       "ratings": [
         {
