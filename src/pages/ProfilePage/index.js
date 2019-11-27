@@ -4,18 +4,16 @@ import { FaEdit, FaStar, FaPlus } from "react-icons/fa";
 
 export default inject("rootStore")(
   observer(function ProfilePage({ rootStore }) {
-    useEffect(() => {
-      rootStore.userStore.loadOne(0);
-    }, [rootStore.userStore]);
+    useEffect(() => {}, [rootStore.userStore]);
 
     function handleAddSkill() {
       return alert(`Parabéns, você clicou no botão`);
     }
-    const fullName = rootStore.userStore.one
-      ? rootStore.userStore.one.fullName
-      : "";
-    const avatar = rootStore.userStore.one
-      ? rootStore.userStore.one.avatar
+    const fullName = rootStore.userStore.user
+      ? rootStore.userStore.user.fullName
+      : "kk";
+    const avatar = rootStore.userStore.user
+      ? rootStore.userStore.user.avatar
       : "";
 
     return (

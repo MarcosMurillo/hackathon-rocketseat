@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { inject, observer } from 'mobx-react'
 import { FaFacebook, FaInstagram, FaUser, FaLock, FaTwitter, FaBars } from "react-icons/fa";
 import logo from '../../images/logo.png';
 
@@ -9,8 +10,26 @@ import ModalBodyComponent from '../../components/ModalComponent/ModalBodyCompone
 import ModalFooterComponent from '../../components/ModalComponent/ModalFooterComponent'
 
 
-export default function HomePage() {
+export default inject("rootStore")(
+  observer(function HomePage({ rootStore }) {
+
   const [showSignInModal, setShowSignInModal] = useState(false)
+  const [loginEmail, setLoginEmail] = useState('')
+  const [loginPassword, setLoginPassword] = useState('')
+  const [loginError, setLoginError] = useState('')
+
+  const handleLogin = async () => {
+    try {
+      const response = await rootStore.userStore.login(loginEmail, loginPassword)
+      if (response) {
+        localStorage.setItem('loggedUserId', response.id)
+        setLoginError('')
+      }
+      else setLoginError('Senha incorreta ou conta inexistente.')
+    } catch(e) {
+      console.log(e)
+    }
+  }
 
   return (
     <>
@@ -73,23 +92,23 @@ export default function HomePage() {
                 <FaUser />
               </InputGroup.Text>
             </InputGroup.Prepend>
-            <FormControl placeholder="Email" />
+            <FormControl placeholder="Email" value={loginEmail} onChange={e => setLoginEmail(e.target.value)} />
           </InputGroup>
-
           <InputGroup className="mb-3">
             <InputGroup.Prepend>
               <InputGroup.Text>
                 <FaLock />
               </InputGroup.Text>
             </InputGroup.Prepend>
-            <FormControl placeholder="Senha" />
+            <FormControl placeholder="Senha" value={loginPassword} onChange={e => setLoginPassword(e.target.value)} />
           </InputGroup>
+          <span className="text-danger">{loginError}</span>
         </ModalBodyComponent>
         <ModalFooterComponent
-          confirmButton={{ text: 'Entrar', behaviour: () => {}}}
+          confirmButton={{ text: 'Entrar', behaviour: handleLogin}}
           cancelButton={{ behaviour: () => setShowSignInModal(false)}} 
         />
       </ModalWrapperComponent>
     </>
   )
-}
+}))
