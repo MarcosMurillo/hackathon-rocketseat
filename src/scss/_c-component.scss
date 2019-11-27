@@ -4,36 +4,38 @@
 |
 */
 
-
 /*======== LOCAL VARIABLES =========*/
 $white: rgb(255, 255, 255);
 
-
 // FONTS
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 
 /*======== LOCAL PLACEHOLDERS =========*/
 
 /*======== MODIFIERS =========*/
-.--bold-700 { font-weight: 700; }
-.--bold-900 { font-weight: 900; }
+.--bold-700 {
+  font-weight: 700;
+}
+.--bold-900 {
+  font-weight: 900;
+}
 
 /*======== COMPONENTS =========*/
 .container {
-  @media(min-width: 1560px) {
+  @media (min-width: 1560px) {
     max-width: 1800px;
-  }  
+  }
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .home {
   height: 100vh;
   width: 100%;
   background: url(images/home-bg.png);
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 }
@@ -56,7 +58,7 @@ body {
 
 .i-facebook,
 .i-instagram,
-.i-twitter { 
+.i-twitter {
   font-size: 3rem;
   color: $dark-blue;
 }
@@ -106,7 +108,7 @@ body {
 .c-login-bt {
   @extend .btn;
   background: $light-orange;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   color: $white;
   font-weight: 700;
   text-transform: uppercase;
@@ -114,3 +116,72 @@ body {
 
 // SCROLLING MENU
 
+// SIGNUP
+
+input {
+  box-sizing: border-box;
+}
+.master {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signupForm {
+  width: auto;
+  height: auto;
+  display: inline-block;
+  border-radius: 15px;
+  padding: 1rem 3rem;
+  text-align: center;
+  font-size: 0.8rem;
+  background: #fff;
+  border: 1px solid $dark-blue;
+}
+.signupForm span {
+  display: block;
+  font-size: 1.5rem;
+  margin: 10px 0 25px;
+  color: $dark-blue;
+}
+.signupForm div {
+  margin: 10px 0;
+}
+.signupForm label {
+  width: 60px;
+  text-align: left;
+}
+
+.signupForm input {
+  width: 250px;
+  height: 2rem;
+  padding: 5px 10px;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+}
+
+.signupForm button {
+  width: 310px;
+  line-height: 2rem;
+  display: inline-block;
+  background: $dark-blue;
+  border: none;
+  color: $white;
+  border-radius: 5px;
+  margin: 20px auto 10px;
+}
+.signupForm button:hover {
+  opacity: 0.7;
+}
+
+.signupForm a {
+  width: auto;
+  margin: 0 auto;
+  display: block;
+  color: #4a74c2;
+}
+.signupForm a:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}
