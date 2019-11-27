@@ -15,8 +15,8 @@ class BaseStore {
     return this.all
   }
 
-  async loadOne(id) {
-    this.one = await this.service.get(id)
+  async loadOne(id, query = '') {
+    this.one = await this.service.get(id, query)
     return this.one
   }
 

@@ -118,70 +118,45 @@ body {
 
 // SIGNUP
 
-input {
-  box-sizing: border-box;
-}
-.master {
-  width: 100vw;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.signupForm {
-  width: auto;
-  height: auto;
-  display: inline-block;
-  border-radius: 15px;
-  padding: 1rem 3rem;
-  text-align: center;
-  font-size: 0.8rem;
-  background: #fff;
-  border: 1px solid $dark-blue;
-}
-.signupForm span {
-  display: block;
-  font-size: 1.5rem;
-  margin: 10px 0 25px;
-  color: $dark-blue;
-}
-.signupForm div {
-  margin: 10px 0;
-}
-.signupForm label {
-  width: 60px;
-  text-align: left;
+.c-signup-form {
+  font-size: 1rem;
+  width: 40%;
+
+  &__tit {
+    font-size: 2rem;
+    color: $black;
+    margin: 4rem 0 3rem 0;
+    font-weight: 700;
+  }
+
+  &__label {
+    width: 60px;
+  }
+
+  &__input {
+    padding: 1rem 1.5rem;
+    @extend .rounded;
+    border: 1px solid #ccc;
+  }
+
+  &__link {
+    color: $black;
+    text-align: center;
+
+    &:hover {
+      text-decoration: none;
+      opacity: 0.7;
+    }
+  }
 }
 
-.signupForm input {
+.c-signup-bt {
+  @extend .btn;
   width: 250px;
-  height: 2rem;
-  padding: 5px 10px;
-  border-radius: 2px;
-  border: 1px solid #ccc;
-}
-
-.signupForm button {
-  width: 310px;
-  line-height: 2rem;
-  display: inline-block;
-  background: $dark-blue;
-  border: none;
+  margin: 3rem auto 0 auto;
+  background: $light-orange;
   color: $white;
-  border-radius: 5px;
-  margin: 20px auto 10px;
-}
-.signupForm button:hover {
-  opacity: 0.7;
-}
-
-.signupForm a {
-  width: auto;
-  margin: 0 auto;
-  display: block;
-  color: #4a74c2;
-}
-.signupForm a:hover {
-  text-decoration: none;
-  opacity: 0.7;
+  text-transform: uppercase;
+  @extend .rounded;
+  font-weight: 700;
 }
