@@ -1,5 +1,16 @@
+/* 
+|
+ DEUS ME PERDOE POR ESSE CÓDIGO
+|
+*/
+
+
 /*======== LOCAL VARIABLES =========*/
 $white: rgb(255, 255, 255);
+
+
+// FONTS
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 /*======== LOCAL PLACEHOLDERS =========*/
 
@@ -12,6 +23,10 @@ $white: rgb(255, 255, 255);
   @media(min-width: 1560px) {
     max-width: 1800px;
   }  
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
 }
 
 .home {
@@ -40,11 +55,62 @@ $white: rgb(255, 255, 255);
 }
 
 .i-facebook,
-.i-instagram { 
+.i-instagram,
+.i-twitter { 
   font-size: 3rem;
   color: $dark-blue;
 }
 
+.i-bars {
+  font-size: 3rem;
+}
+
+.c-nav-link {
+  @extend .nav-link;
+  @extend .px-3;
+
+  font-size: 1.5rem;
+  color: $black;
+  font-weight: 700;
+}
+
+.c-intro {
+  height: 100vh;
+  width: 50%;
+
+  &__tit {
+    font-size: 4rem;
+    line-height: 5.5rem;
+    font-weight: 900;
+  }
+
+  &__sub-tit {
+    font-size: 2rem;
+    line-height: 3rem;
+    font-weight: 700;
+  }
+}
+
+.c-big-bt {
+  background: $light-orange;
+  padding: 1rem 2rem;
+  width: 300px;
+  font-size: 2rem;
+  color: $white;
+  text-transform: uppercase;
+  font-weight: 700;
+  @extend .rounded;
+  text-align: center;
+}
+
+.c-login-bt {
+  @extend .btn;
+  background: $light-orange;
+  padding: .5rem 1rem;
+  color: $white;
+  font-weight: 700;
+  text-transform: uppercase;
+}
 
 // SCROLLING MENU
 
