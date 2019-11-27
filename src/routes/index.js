@@ -1,12 +1,13 @@
-import React from 'react'
-import {Switch, Route} from 'react-router-dom'
-import Profile from '../pages/ProfilePage'
+import React from "react";
+import { Switch, Route } from "react-router-dom";
+import HomePage from "../pages/HomePage";
+import Profile from "../pages/ProfilePage";
 
 const Routes = () => (
   <Switch>
-    <Route exact path="/profile" component={Profile} />
+    <Route exact path="/" component={HomePage} />
+    <Route path="/profile" component={Profile} />
   </Switch>
-
 );
 
 export default Routes;

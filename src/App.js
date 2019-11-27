@@ -1,6 +1,6 @@
 import React from "react";
-import  {BrowserRouter} from 'react-router-dom'
-import Routes from './routes'
+import { BrowserRouter } from "react-router-dom";
+import Routes from "./routes";
 function App() {
   return (
     <BrowserRouter>
@@ -9,4 +9,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
