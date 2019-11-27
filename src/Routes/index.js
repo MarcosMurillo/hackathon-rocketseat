@@ -4,7 +4,7 @@ import Profile from '../pages/ProfilePage'
 
 const Routes = () => (
   <Switch>
-    <Route exact path="/" component={Profile} />
+    <Route exact path="/profile" component={Profile} />
   </Switch>
 
 );

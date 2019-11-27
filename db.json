@@ -2,7 +2,7 @@
   "users": [
     {
       "id": 0,
-      "fullName": "Felipe Chieric",
+      "fullName": "Felipe Chierice",
       "email": "fschierice",
       "password": "senha123",
       "avatar": "https://pickaface.net/gallery/avatar/20151109_144853_2380_sample.png"
@@ -47,6 +47,14 @@
       "title": "Como fazer tal coisa?",
       "description": "Estou tendo problemas para fazer tal tal tal, como resolver?",
       "relatedTechnologies": [0, 2, 4]
+    },
+    {
+      "id": 1,
+      "categoryId": 1,
+      "authorId": 2,
+      "title": "Como fazer uma API com Node.js e Express.js",
+      "description": "Para criar essa API você vai precisar fazer tal e tal...",
+      "relatedTechnologies": [0, 2, 4]
     }
   ],
 
@@ -54,9 +62,27 @@
     {
       "id": 0,
       "authorId": 1,
-      "feedId": 0,
+      "postId": 0,
       "fatherCommentId": null,
       "comment": "Faz tal tal tal. De nada.",
+      "createdAt": 1574815233,
+      "updatedAt": null
+    },
+    {
+      "id": 0,
+      "authorId": 3,
+      "postId": 0,
+      "fatherCommentId": null,
+      "comment": "Tbm tinha essa dúvida e me ajudou, obg.",
+      "createdAt": 1574815233,
+      "updatedAt": null
+    },
+    {
+      "id": 0,
+      "authorId": 1,
+      "postId": 1,
+      "fatherCommentId": null,
+      "comment": "Mt legal parabéns.",
       "createdAt": 1574815233,
       "updatedAt": null
     }

@@ -19,7 +19,7 @@ const database = {
   ],
 
   comments: [
-    { id: Number, authorId: Number, feedId: Number, fatherCommentId: Number, comment: String, repoUrl: String, createdAt: Timestamp, updatedAt: Timestamp }
+    { id: Number, authorId: Number, postId: Number, fatherCommentId: Number, comment: String, repoUrl: String, createdAt: Timestamp, updatedAt: Timestamp }
   ],
 
   feedCategories: [
