@@ -4,7 +4,6 @@ import Routes from './routes'
 function App() {
   return (
     <BrowserRouter>
-      <h1>Hackathon Rocketseat</h1>
       <Routes />
     </BrowserRouter>
   );
