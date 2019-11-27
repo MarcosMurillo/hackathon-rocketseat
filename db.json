@@ -3,7 +3,7 @@
     {
       "id": 0,
       "fullName": "Felipe Chierice",
-      "email": "fschierice",
+      "email": "fschierice@gmail.com",
       "password": "senha123",
       "avatar": "https://pickaface.net/gallery/avatar/20151109_144853_2380_sample.png"
     },
@@ -114,7 +114,7 @@
     }
   ],
 
-  "tecnologies": [
+  "technologies": [
     { "id": 0, "title": "Node.js", "image": "" },
     { "id": 1, "title": "ReactJS", "image": "" },
     { "id": 2, "title": "React Native", "image": "" },
