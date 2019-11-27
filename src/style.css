@@ -2288,7 +2288,7 @@ textarea.form-control {
   }
 }
 
-.btn, .c-login-bt {
+.btn, .c-login-bt, .c-signup-bt {
   display: inline-block;
   font-weight: 400;
   color: #212529;
@@ -2306,28 +2306,29 @@ textarea.form-control {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .btn, .c-login-bt {
+  .btn, .c-login-bt, .c-signup-bt {
     transition: none;
   }
 }
 
-.btn:hover, .c-login-bt:hover {
+.btn:hover, .c-login-bt:hover, .c-signup-bt:hover {
   color: #212529;
   text-decoration: none;
 }
 
-.btn:focus, .c-login-bt:focus, .btn.focus, .focus.c-login-bt {
+.btn:focus, .c-login-bt:focus, .c-signup-bt:focus, .btn.focus, .focus.c-login-bt, .focus.c-signup-bt {
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
-.btn.disabled, .disabled.c-login-bt, .btn:disabled, .c-login-bt:disabled {
+.btn.disabled, .disabled.c-login-bt, .disabled.c-signup-bt, .btn:disabled, .c-login-bt:disabled, .c-signup-bt:disabled {
   opacity: 0.65;
 }
 
-a.btn.disabled, a.disabled.c-login-bt,
+a.btn.disabled, a.disabled.c-login-bt, a.disabled.c-signup-bt,
 fieldset:disabled a.btn,
-fieldset:disabled a.c-login-bt {
+fieldset:disabled a.c-login-bt,
+fieldset:disabled a.c-signup-bt {
   pointer-events: none;
 }
 
@@ -2904,14 +2905,14 @@ fieldset:disabled a.c-login-bt {
   pointer-events: none;
 }
 
-.btn-lg, .btn-group-lg > .btn, .btn-group-lg > .c-login-bt {
+.btn-lg, .btn-group-lg > .btn, .btn-group-lg > .c-login-bt, .btn-group-lg > .c-signup-bt {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 0.3rem;
 }
 
-.btn-sm, .btn-group-sm > .btn, .btn-group-sm > .c-login-bt {
+.btn-sm, .btn-group-sm > .btn, .btn-group-sm > .c-login-bt, .btn-group-sm > .c-signup-bt {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -3219,26 +3220,31 @@ input[type="button"].btn-block {
   vertical-align: middle;
 }
 
-.btn-group > .btn, .btn-group > .c-login-bt,
+.btn-group > .btn, .btn-group > .c-login-bt, .btn-group > .c-signup-bt,
 .btn-group-vertical > .btn,
-.btn-group-vertical > .c-login-bt {
+.btn-group-vertical > .c-login-bt,
+.btn-group-vertical > .c-signup-bt {
   position: relative;
   flex: 1 1 auto;
 }
 
-.btn-group > .btn:hover, .btn-group > .c-login-bt:hover,
+.btn-group > .btn:hover, .btn-group > .c-login-bt:hover, .btn-group > .c-signup-bt:hover,
 .btn-group-vertical > .btn:hover,
-.btn-group-vertical > .c-login-bt:hover {
+.btn-group-vertical > .c-login-bt:hover,
+.btn-group-vertical > .c-signup-bt:hover {
   z-index: 1;
 }
 
-.btn-group > .btn:focus, .btn-group > .c-login-bt:focus, .btn-group > .btn:active, .btn-group > .c-login-bt:active, .btn-group > .btn.active, .btn-group > .active.c-login-bt,
+.btn-group > .btn:focus, .btn-group > .c-login-bt:focus, .btn-group > .c-signup-bt:focus, .btn-group > .btn:active, .btn-group > .c-login-bt:active, .btn-group > .c-signup-bt:active, .btn-group > .btn.active, .btn-group > .active.c-login-bt, .btn-group > .active.c-signup-bt,
 .btn-group-vertical > .btn:focus,
 .btn-group-vertical > .c-login-bt:focus,
+.btn-group-vertical > .c-signup-bt:focus,
 .btn-group-vertical > .btn:active,
 .btn-group-vertical > .c-login-bt:active,
+.btn-group-vertical > .c-signup-bt:active,
 .btn-group-vertical > .btn.active,
-.btn-group-vertical > .active.c-login-bt {
+.btn-group-vertical > .active.c-login-bt,
+.btn-group-vertical > .active.c-signup-bt {
   z-index: 1;
 }
 
@@ -3252,21 +3258,23 @@ input[type="button"].btn-block {
   width: auto;
 }
 
-.btn-group > .btn:not(:first-child), .btn-group > .c-login-bt:not(:first-child),
+.btn-group > .btn:not(:first-child), .btn-group > .c-login-bt:not(:first-child), .btn-group > .c-signup-bt:not(:first-child),
 .btn-group > .btn-group:not(:first-child) {
   margin-left: -1px;
 }
 
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .c-login-bt:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .c-login-bt:not(:last-child):not(.dropdown-toggle), .btn-group > .c-signup-bt:not(:last-child):not(.dropdown-toggle),
 .btn-group > .btn-group:not(:last-child) > .btn,
-.btn-group > .btn-group:not(:last-child) > .c-login-bt {
+.btn-group > .btn-group:not(:last-child) > .c-login-bt,
+.btn-group > .btn-group:not(:last-child) > .c-signup-bt {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.btn-group > .btn:not(:first-child), .btn-group > .c-login-bt:not(:first-child),
+.btn-group > .btn:not(:first-child), .btn-group > .c-login-bt:not(:first-child), .btn-group > .c-signup-bt:not(:first-child),
 .btn-group > .btn-group:not(:first-child) > .btn,
-.btn-group > .btn-group:not(:first-child) > .c-login-bt {
+.btn-group > .btn-group:not(:first-child) > .c-login-bt,
+.btn-group > .btn-group:not(:first-child) > .c-signup-bt {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -3286,12 +3294,12 @@ input[type="button"].btn-block {
   margin-right: 0;
 }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .btn-group-sm > .c-login-bt + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .btn-group-sm > .c-login-bt + .dropdown-toggle-split, .btn-group-sm > .c-signup-bt + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem;
 }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .btn-group-lg > .c-login-bt + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .btn-group-lg > .c-login-bt + .dropdown-toggle-split, .btn-group-lg > .c-signup-bt + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem;
 }
@@ -3305,42 +3313,49 @@ input[type="button"].btn-block {
 
 .btn-group-vertical > .btn,
 .btn-group-vertical > .c-login-bt,
+.btn-group-vertical > .c-signup-bt,
 .btn-group-vertical > .btn-group {
   width: 100%;
 }
 
-.btn-group-vertical > .btn:not(:first-child), .btn-group-vertical > .c-login-bt:not(:first-child),
+.btn-group-vertical > .btn:not(:first-child), .btn-group-vertical > .c-login-bt:not(:first-child), .btn-group-vertical > .c-signup-bt:not(:first-child),
 .btn-group-vertical > .btn-group:not(:first-child) {
   margin-top: -1px;
 }
 
-.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .c-login-bt:not(:last-child):not(.dropdown-toggle),
+.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .c-login-bt:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .c-signup-bt:not(:last-child):not(.dropdown-toggle),
 .btn-group-vertical > .btn-group:not(:last-child) > .btn,
-.btn-group-vertical > .btn-group:not(:last-child) > .c-login-bt {
+.btn-group-vertical > .btn-group:not(:last-child) > .c-login-bt,
+.btn-group-vertical > .btn-group:not(:last-child) > .c-signup-bt {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.btn-group-vertical > .btn:not(:first-child), .btn-group-vertical > .c-login-bt:not(:first-child),
+.btn-group-vertical > .btn:not(:first-child), .btn-group-vertical > .c-login-bt:not(:first-child), .btn-group-vertical > .c-signup-bt:not(:first-child),
 .btn-group-vertical > .btn-group:not(:first-child) > .btn,
-.btn-group-vertical > .btn-group:not(:first-child) > .c-login-bt {
+.btn-group-vertical > .btn-group:not(:first-child) > .c-login-bt,
+.btn-group-vertical > .btn-group:not(:first-child) > .c-signup-bt {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
 
-.btn-group-toggle > .btn, .btn-group-toggle > .c-login-bt,
+.btn-group-toggle > .btn, .btn-group-toggle > .c-login-bt, .btn-group-toggle > .c-signup-bt,
 .btn-group-toggle > .btn-group > .btn,
-.btn-group-toggle > .btn-group > .c-login-bt {
+.btn-group-toggle > .btn-group > .c-login-bt,
+.btn-group-toggle > .btn-group > .c-signup-bt {
   margin-bottom: 0;
 }
 
-.btn-group-toggle > .btn input[type="radio"], .btn-group-toggle > .c-login-bt input[type="radio"],
+.btn-group-toggle > .btn input[type="radio"], .btn-group-toggle > .c-login-bt input[type="radio"], .btn-group-toggle > .c-signup-bt input[type="radio"],
 .btn-group-toggle > .btn input[type="checkbox"],
 .btn-group-toggle > .c-login-bt input[type="checkbox"],
+.btn-group-toggle > .c-signup-bt input[type="checkbox"],
 .btn-group-toggle > .btn-group > .btn input[type="radio"],
 .btn-group-toggle > .btn-group > .c-login-bt input[type="radio"],
+.btn-group-toggle > .btn-group > .c-signup-bt input[type="radio"],
 .btn-group-toggle > .btn-group > .btn input[type="checkbox"],
-.btn-group-toggle > .btn-group > .c-login-bt input[type="checkbox"] {
+.btn-group-toggle > .btn-group > .c-login-bt input[type="checkbox"],
+.btn-group-toggle > .btn-group > .c-signup-bt input[type="checkbox"] {
   position: absolute;
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
@@ -3422,34 +3437,45 @@ input[type="button"].btn-block {
   display: flex;
 }
 
-.input-group-prepend .btn, .input-group-prepend .c-login-bt,
+.input-group-prepend .btn, .input-group-prepend .c-login-bt, .input-group-prepend .c-signup-bt,
 .input-group-append .btn,
-.input-group-append .c-login-bt {
+.input-group-append .c-login-bt,
+.input-group-append .c-signup-bt {
   position: relative;
   z-index: 2;
 }
 
-.input-group-prepend .btn:focus, .input-group-prepend .c-login-bt:focus,
+.input-group-prepend .btn:focus, .input-group-prepend .c-login-bt:focus, .input-group-prepend .c-signup-bt:focus,
 .input-group-append .btn:focus,
-.input-group-append .c-login-bt:focus {
+.input-group-append .c-login-bt:focus,
+.input-group-append .c-signup-bt:focus {
   z-index: 3;
 }
 
-.input-group-prepend .btn + .btn, .input-group-prepend .c-login-bt + .btn, .input-group-prepend .btn + .c-login-bt, .input-group-prepend .c-login-bt + .c-login-bt,
+.input-group-prepend .btn + .btn, .input-group-prepend .c-login-bt + .btn, .input-group-prepend .c-signup-bt + .btn, .input-group-prepend .btn + .c-login-bt, .input-group-prepend .c-login-bt + .c-login-bt, .input-group-prepend .c-signup-bt + .c-login-bt, .input-group-prepend .btn + .c-signup-bt, .input-group-prepend .c-login-bt + .c-signup-bt, .input-group-prepend .c-signup-bt + .c-signup-bt,
 .input-group-prepend .btn + .input-group-text,
 .input-group-prepend .c-login-bt + .input-group-text,
+.input-group-prepend .c-signup-bt + .input-group-text,
 .input-group-prepend .input-group-text + .input-group-text,
 .input-group-prepend .input-group-text + .btn,
 .input-group-prepend .input-group-text + .c-login-bt,
+.input-group-prepend .input-group-text + .c-signup-bt,
 .input-group-append .btn + .btn,
 .input-group-append .c-login-bt + .btn,
+.input-group-append .c-signup-bt + .btn,
 .input-group-append .btn + .c-login-bt,
 .input-group-append .c-login-bt + .c-login-bt,
+.input-group-append .c-signup-bt + .c-login-bt,
+.input-group-append .btn + .c-signup-bt,
+.input-group-append .c-login-bt + .c-signup-bt,
+.input-group-append .c-signup-bt + .c-signup-bt,
 .input-group-append .btn + .input-group-text,
 .input-group-append .c-login-bt + .input-group-text,
+.input-group-append .c-signup-bt + .input-group-text,
 .input-group-append .input-group-text + .input-group-text,
 .input-group-append .input-group-text + .btn,
-.input-group-append .input-group-text + .c-login-bt {
+.input-group-append .input-group-text + .c-login-bt,
+.input-group-append .input-group-text + .c-signup-bt {
   margin-left: -1px;
 }
 
@@ -3493,8 +3519,10 @@ input[type="button"].btn-block {
 .input-group-lg > .input-group-append > .input-group-text,
 .input-group-lg > .input-group-prepend > .btn,
 .input-group-lg > .input-group-prepend > .c-login-bt,
+.input-group-lg > .input-group-prepend > .c-signup-bt,
 .input-group-lg > .input-group-append > .btn,
-.input-group-lg > .input-group-append > .c-login-bt {
+.input-group-lg > .input-group-append > .c-login-bt,
+.input-group-lg > .input-group-append > .c-signup-bt {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
@@ -3512,8 +3540,10 @@ input[type="button"].btn-block {
 .input-group-sm > .input-group-append > .input-group-text,
 .input-group-sm > .input-group-prepend > .btn,
 .input-group-sm > .input-group-prepend > .c-login-bt,
+.input-group-sm > .input-group-prepend > .c-signup-bt,
 .input-group-sm > .input-group-append > .btn,
-.input-group-sm > .input-group-append > .c-login-bt {
+.input-group-sm > .input-group-append > .c-login-bt,
+.input-group-sm > .input-group-append > .c-signup-bt {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -3525,25 +3555,29 @@ input[type="button"].btn-block {
   padding-right: 1.75rem;
 }
 
-.input-group > .input-group-prepend > .btn, .input-group > .input-group-prepend > .c-login-bt,
+.input-group > .input-group-prepend > .btn, .input-group > .input-group-prepend > .c-login-bt, .input-group > .input-group-prepend > .c-signup-bt,
 .input-group > .input-group-prepend > .input-group-text,
 .input-group > .input-group-append:not(:last-child) > .btn,
 .input-group > .input-group-append:not(:last-child) > .c-login-bt,
+.input-group > .input-group-append:not(:last-child) > .c-signup-bt,
 .input-group > .input-group-append:not(:last-child) > .input-group-text,
 .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .c-login-bt:not(:last-child):not(.dropdown-toggle),
+.input-group > .input-group-append:last-child > .c-signup-bt:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .input-group-text:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.input-group > .input-group-append > .btn, .input-group > .input-group-append > .c-login-bt,
+.input-group > .input-group-append > .btn, .input-group > .input-group-append > .c-login-bt, .input-group > .input-group-append > .c-signup-bt,
 .input-group > .input-group-append > .input-group-text,
 .input-group > .input-group-prepend:not(:first-child) > .btn,
 .input-group > .input-group-prepend:not(:first-child) > .c-login-bt,
+.input-group > .input-group-prepend:not(:first-child) > .c-signup-bt,
 .input-group > .input-group-prepend:not(:first-child) > .input-group-text,
 .input-group > .input-group-prepend:first-child > .btn:not(:first-child),
 .input-group > .input-group-prepend:first-child > .c-login-bt:not(:first-child),
+.input-group > .input-group-prepend:first-child > .c-signup-bt:not(:first-child),
 .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -4826,7 +4860,7 @@ a.badge:hover, a.badge:focus {
   display: none;
 }
 
-.btn .badge, .c-login-bt .badge {
+.btn .badge, .c-login-bt .badge, .c-signup-bt .badge {
   position: relative;
   top: -1px;
 }
@@ -6492,7 +6526,7 @@ button.bg-dark:focus {
   border-radius: 0.2rem !important;
 }
 
-.rounded, .c-big-bt {
+.rounded, .c-big-bt, .c-signup-form__input, .c-signup-bt {
   border-radius: 0.25rem !important;
 }
 
@@ -9600,7 +9634,7 @@ a.text-dark:hover, a.text-dark:focus {
     text-shadow: none !important;
     box-shadow: none !important;
   }
-  a:not(.btn):not(.c-login-bt) {
+  a:not(.btn):not(.c-login-bt):not(.c-signup-bt) {
     text-decoration: underline;
   }
   abbr[title]::after {
@@ -9699,7 +9733,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .home {
@@ -9763,8 +9797,48 @@ body {
 
 .c-login-bt {
   background: #F57C34;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   color: white;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.c-signup-form {
+  font-size: 1rem;
+  width: 40%;
+}
+
+.c-signup-form__tit {
+  display: block;
+  font-size: 1.5rem;
+  margin: 10px 0 25px;
+  color: #f8f9fa;
+}
+
+.c-signup-form__label {
+  width: 60px;
+}
+
+.c-signup-form__input {
+  padding: 1rem 1.5rem;
+  border: 1px solid #ccc;
+}
+
+.c-signup-form__link {
+  color: black;
+  text-align: center;
+}
+
+.c-signup-form__link:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+.c-signup-bt {
+  width: 250px;
+  margin: 3rem auto 0 auto;
+  background: #F57C34;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
 }
