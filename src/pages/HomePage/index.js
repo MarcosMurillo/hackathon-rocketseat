@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaFacebook, FaInstagram, FaUser, FaLock } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaUser, FaLock, FaTwitter, FaBars } from "react-icons/fa";
 import logo from '../../images/logo.png';
 
 import { InputGroup, FormControl } from 'react-bootstrap'
@@ -15,41 +15,39 @@ export default function HomePage() {
   return (
     <>
       <div className="home">
-        <nav className="c-navbar fixed-top">
+        <nav className="c-navbar navbar-expand-lg fixed-top">
           <a className="navbar-brand" href="/"><img className="c-brand" src={logo} alt="Logo"/></a>
-          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-            <span className="navbar-toggler-icon"></span>
+          <button className="navbar-toggler " type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+            <FaBars className="i-bars" />
           </button>
 
-          <div className="collapse navbar-collapse" id="conteudoNavbarSuportado">
+          <div className="collapse navbar-collapse ml-5" id="conteudoNavbarSuportado">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item active">
-                <button className="nav-link" onClick={() => setShowSignInModal(true)}>Entrar</button>
+                <a className="c-nav-link" href="/">Home<span className="sr-only">(página atual)</span></a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/">Link</a>
-              </li>
-              <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Dropdown
-                </a>
-                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <button data-toggle="modal" data-target="#sign-in">Entrar</button>
-                  <a className="dropdown-item" href="/">Outra ação</a>
-                  <div className="dropdown-divider"></div>
-                  <a className="dropdown-item" href="/">Algo mais aqui</a>
-                </div>
+                <a className="c-nav-link" href="/">Como funciona</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link disabled" href="/">Desativado</a>
+                <a className="c-nav-link" href="/">API</a>
+              </li>
+              <li className="nav-item">
+                <a className="c-nav-link" href="/">Contato</a>
               </li>
             </ul>
           </div>
+
+          <button className="c-login-bt mr-5" onClick={() => setShowSignInModal(true)}>Login</button>
         </nav>
       
         <div className="container">
           <div className="row">
-            
+            <div className="c-intro d-flex flex-column justify-content-center">
+              <h1 className="c-intro__tit">Aprenda. Ensine. Trabalhe.</h1>
+              <h2 className="c-intro__sub-tit mt-3">O plataforma definitiva para iniciantes até sêniors da programação.</h2>
+              <a className="c-big-bt mt-4" href="/">Cadastre-se</a>
+            </div>
           </div>
         </div>
 
@@ -58,7 +56,8 @@ export default function HomePage() {
             <div className="row">
               <div className="c-list-icons d-flex">
                 <FaFacebook className="i-facebook mr-3" />
-                <FaInstagram className="i-instagram" />
+                <FaInstagram className="i-instagram mr-3" />
+                <FaTwitter className="i-twitter" />
               </div>
             </div>
           </div>
