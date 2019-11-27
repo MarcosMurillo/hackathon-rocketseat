@@ -9667,3 +9667,78 @@ a.text-dark:hover, a.text-dark:focus {
   font-size: 3rem;
   color: #27419E;
 }
+
+input {
+  box-sizing: border-box;
+}
+
+.master {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signupForm {
+  width: auto;
+  height: auto;
+  display: inline-block;
+  border-radius: 15px;
+  padding: 1rem 3rem;
+  text-align: center;
+  font-size: 0.8rem;
+  background: #fff;
+  border: 1px solid #27419E;
+}
+
+.signupForm span {
+  display: block;
+  font-size: 1.5rem;
+  margin: 10px 0 25px;
+  color: #27419E;
+}
+
+.signupForm div {
+  margin: 10px 0;
+}
+
+.signupForm label {
+  width: 60px;
+  text-align: left;
+}
+
+.signupForm input {
+  width: 250px;
+  height: 2rem;
+  padding: 5px 10px;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+}
+
+.signupForm button {
+  width: 310px;
+  line-height: 2rem;
+  display: inline-block;
+  background: #27419E;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  margin: 20px auto 10px;
+}
+
+.signupForm button:hover {
+  opacity: 0.7;
+}
+
+.signupForm a {
+  width: auto;
+  margin: 0 auto;
+  display: block;
+  color: #4a74c2;
+}
+
+.signupForm a:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}
