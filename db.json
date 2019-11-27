@@ -5,6 +5,7 @@
       "fullName": "Felipe Chierice",
       "email": "fschierice@gmail.com",
       "password": "senha123",
+      "city": "Campinas",
       "avatar": "https://pickaface.net/gallery/avatar/20151109_144853_2380_sample.png"
     },
     {
@@ -12,6 +13,7 @@
       "fullName": "Marcos Murillo",
       "email": "murillo.psoft@gmail.com",
       "password": "senha123",
+      "city": "Campinas",
       "avatar": "http://texasapartmentbrokers.com/wp-content/uploads/2016/01/John-Doe.png"
     },
     {
@@ -19,6 +21,7 @@
       "fullName": "Alex Marques",
       "email": "falecomlex@gmail.com",
       "password": "senha123",
+      "city": "Americana",
       "avatar": "https://pickaface.net/gallery/avatar/acrovin559439058dc7f.png"
     },
     {
@@ -26,6 +29,7 @@
       "fullName": "Robson Dourado",
       "email": "r.dourado007@gmail.com",
       "password": "senha123",
+      "city": "Hortolândia",
       "avatar": "https://pickaface.net/gallery/avatar/unr_sample_161118_2054_ynlrg.png"
     }
   ],
