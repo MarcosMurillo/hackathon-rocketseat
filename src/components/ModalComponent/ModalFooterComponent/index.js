@@ -8,7 +8,7 @@ export default function ModalFooterComponent({ confirmButton, cancelButton }) {
         { (cancelButton && cancelButton.text) || 'Fechar' }
       </Button>
       { confirmButton 
-        ? <Button variant="primary" onClick={ confirmButton.behaviour || undefined }>
+        ? <Button variant="primary" onClick={ () => confirmButton.behaviour() }>
           { confirmButton.text || 'Confirmar' }
         </Button>
         : <></>

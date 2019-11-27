@@ -6,28 +6,51 @@ class BaseService {
   }
 
   async list() {
-    const response = await axios.get(this.endpoint)
-    return response.data
+    try {
+      const response = await axios.get(this.endpoint)
+      return response.data
+    } catch(e) {
+      return e
+    }
+    
   }
 
   async get(id) {
-    const response = await axios.get(`${this.endpoint}/${id}`)
-    return response.data
+    try {
+      const response = await axios.get(`${this.endpoint}/${id}`)
+      return response.data
+    } catch(e) {
+      return e
+    }
+    
   }
 
   async post(body) {
-    const response = await axios.post(this.endpoint, body)
-    return response.data
+    try {
+      const response = await axios.post(this.endpoint, body)
+      return response.data
+    } catch(e) {
+      return e
+    }
+    
   }
 
   async update(id, body) {
-    const response = await axios.put(`${this.endpoint}/${id}`, body)
-    return response.data
+    try {
+      const response = await axios.put(`${this.endpoint}/${id}`, body)
+      return response.data
+    } catch(e) {
+      return e
+    }
   }
 
   async delete(id) {
-    const response = await axios.put(`${this.endpoint}/${id}`)
-    return response.data
+    try{
+      const response = await axios.put(`${this.endpoint}/${id}`)
+      return response.data
+    } catch(e) {
+      return e
+    }
   }
 }
 
