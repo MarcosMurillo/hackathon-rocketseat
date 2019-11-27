@@ -13,7 +13,7 @@ export default inject("rootStore")(
     }
     const fullName = rootStore.userStore.one
       ? rootStore.userStore.one.fullName
-      : "kk";
+      : "";
     const avatar = rootStore.userStore.one
       ? rootStore.userStore.one.avatar
       : "";
