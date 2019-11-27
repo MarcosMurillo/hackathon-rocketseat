@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { inject, observer } from "mobx-react";
 import { FaEdit, FaStar, FaPlus } from "react-icons/fa";
 
+import Navbar from '../../components/Navbar';
+
 // import { Container } from './styles';
 
 export default function FeedPage() {
@@ -22,15 +24,9 @@ export default function FeedPage() {
 
   return (
     <>
-      <div className="profile-header">
-        {/* <img src={} alt="" /> */}
-        <span>
-          Editar perfil <FaEdit />
-        </span>
-        <span>
-          Patente <FaStar />
-        </span>
-      </div>
+      <Navbar />
+
+      
     </>
   );
 }
