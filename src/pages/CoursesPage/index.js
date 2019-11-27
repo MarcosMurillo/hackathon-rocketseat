@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import { inject, observer } from "mobx-react";
+
+import Navbar from '../../components/Navbar';
 // import { toJS } from 'mobx'
 
 import TechnologyComponent from '../../components/TechnologyComponent'
@@ -10,10 +12,9 @@ export default inject("rootStore")(
       rootStore.courseStore.loadAll()
     }, [rootStore.courseStore]);
 
-    // console.log(rootStore.courseStore.all && toJS(rootStore.courseStore.all[0].relatedTechnologies))
-
     return (
       <>
+        <Navbar />
         { rootStore.courseStore.all ? 
           rootStore.courseStore.all.map(course => (
             <div className="card m-3" key={course.id}>

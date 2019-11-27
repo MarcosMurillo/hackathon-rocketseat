@@ -3,6 +3,8 @@ import { inject, observer } from 'mobx-react'
 import { FaFacebook, FaInstagram, FaUser, FaLock, FaTwitter, FaBars } from "react-icons/fa";
 import logo from '../../images/logo.png';
 
+import Navbar from '../../components/Navbar'
+
 import { InputGroup, FormControl } from 'react-bootstrap'
 import ModalWrapperComponent from '../../components/ModalComponent/ModalWrapperComponent'
 import ModalHeaderComponent from '../../components/ModalComponent/ModalHeaderComponent'
@@ -34,31 +36,7 @@ export default inject("rootStore")(
   return (
     <>
       <div className="home">
-        <nav className="c-navbar navbar-expand-lg fixed-top">
-          <a className="navbar-brand" href="/"><img className="c-brand" src={logo} alt="Logo"/></a>
-          <button className="navbar-toggler " type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-            <FaBars className="i-bars" />
-          </button>
-
-          <div className="collapse navbar-collapse ml-5" id="conteudoNavbarSuportado">
-            <ul className="navbar-nav mr-auto">
-              <li className="nav-item active">
-                <a className="c-nav-link" href="/">Home<span className="sr-only">(página atual)</span></a>
-              </li>
-              <li className="nav-item">
-                <a className="c-nav-link" href="/">Como funciona</a>
-              </li>
-              <li className="nav-item">
-                <a className="c-nav-link" href="/">API</a>
-              </li>
-              <li className="nav-item">
-                <a className="c-nav-link" href="/">Contato</a>
-              </li>
-            </ul>
-          </div>
-
-          <button className="c-login-bt mr-5" onClick={() => setShowSignInModal(true)}>Login</button>
-        </nav>
+        <Navbar setShowSignInModal={setShowSignInModal} />
       
         <div className="container">
           <div className="row">
