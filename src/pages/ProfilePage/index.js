@@ -43,48 +43,47 @@ export default inject("rootStore")(
               </li>
             </ul>
           </div>
-
-          <button className="c-login-bt mr-5">Sair</button>
+          <div className="c-avatar-mini d-flex align-items-center mr-5"><img className="mr-3 rounded-circle" src={avatar} alt="Avatar" />Editar perfil <FaEdit className="ml-3" /></div>
+          <button className="c-login-bt mr-5">Sair</button> 
         </nav>
 
         <div className="container">
           <div className="row">
-            
-            <div className="c-profile-header d-flex w-50">
-              <img src={avatar} alt="Avatar" />
-              <div className="d-flex flex-column">
-                <span>
-                  Editar perfil <FaEdit />
-                </span>
-                <span>
-                  Patente <FaStar />
-                </span>
+            <div className="d-flex flex-column">
+              <h1 className="c-tit-primary">Perfil</h1>
+
+              <div className="c-profile-header d-flex flex-row">
+                <img className="mr-3" src={avatar} alt="Avatar" />
+                <div className="d-flex flex-column">
+                  <p className="d-flex align-items-center">
+                    <span className="mr-3">Patente</span> <FaStar />
+                  </p>
+                </div>
+              </div>
+
+              <div className="profile-info">
+                <p>{fullName}</p>
+                <p>Campinas-SP</p>
+                <p>Front-end JavasScript</p>
+                <p>
+                  {`Olá sou ${fullName}, sou apaixonado por programação
+                  javascript, e por todo ecossistema em volta dessa stack`}
+                </p>
+                <p>Dev Skill's:</p>
+                <button onClick={handleAddSkill}>
+                  Add More <FaPlus />
+                </button>
+                <p>React, React Native, styled-components, Redux</p>
+              </div>
+
+              <div className="profile-post">
+                Atividade do perfil
+                <div className="box-post">POST 1</div>
+                <div className="box-post">POST 2</div>
+                <div className="box-post">POST 3</div>
+                <div className="box-post">POST 4</div>
               </div>
             </div>
-
-            <div className="profile-info">
-              <p>{fullName}</p>
-              <p>Campinas-SP</p>
-              <p>Front-end JavasScript</p>
-              <p>
-                {`Olá sou ${fullName}, sou apaixonado por programação
-                javascript, e por todo ecossistema em volta dessa stack`}
-              </p>
-              <p>Dev Skill's:</p>
-              <button onClick={handleAddSkill}>
-                Add More <FaPlus />
-              </button>
-              <p>React, React Native, styled-components, Redux</p>
-            </div>
-
-            <div className="profile-post">
-              Atividade do perfil
-              <div className="box-post">POST 1</div>
-              <div className="box-post">POST 2</div>
-              <div className="box-post">POST 3</div>
-              <div className="box-post">POST 4</div>
-            </div>
-
           </div>
         </div>
         
