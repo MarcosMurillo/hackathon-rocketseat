@@ -14,7 +14,7 @@ export default function SignupPage() {
           <img src={logo} alt="Logo"/>
 
           <form action="" className="c-signup-form d-flex flex-column w-50">
-            <h1 className="c-signup-form__tit">Cadastrar</h1>
+            <h1 className="c-signup-form__tit text-center ">Estamos quase lá ...</h1>
             <input className="c-signup-form__input mb-3" type="text" placeholder="Nome" name="fullName" id="fullName" />
             <input className="c-signup-form__input mb-3" type="text" placeholder="Cidade" name="city" id="city" />
             <input className="c-signup-form__input mb-3" type="text" placeholder="Avatar" name="avatar" id="avatar" />
