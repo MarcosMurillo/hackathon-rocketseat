@@ -32,6 +32,7 @@ const database = {
       partnerId: Number,
       title: String, 
       description: String,
+      relatedTechnologies: [Number],
       ratingAverage: Number,
       ratings: [
         { id: Number, authorId: Number, comment: String, starts: Number }
