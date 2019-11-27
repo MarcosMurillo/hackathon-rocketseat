@@ -9820,12 +9820,13 @@ body {
 }
 
 .c-signup-form__input {
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
   border: 1px solid #ccc;
 }
 
 .c-signup-form__link {
   color: black;
+  text-align: center;
 }
 
 .c-signup-form__link:hover {
