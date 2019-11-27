@@ -1,0 +1,79 @@
+/*======== LOCAL VARIABLES =========*/
+$dark-gray: rgb(85, 85, 85);
+$light-gray: rgb(253, 239, 244);
+$gray: rgb(239, 241, 242);
+$md-gray: rgb(85, 85, 85);
+$white: rgb(255, 255, 255);
+$color-publisher: #DF4579;
+$text-small: .7rem;
+$text-default: .9rem;
+
+/*======== LOCAL PLACEHOLDERS =========*/
+%icon-text-style {
+  line-height: 0;
+  font-size: 1rem;
+  color: $dark-gray;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*======== MODIFIERS =========*/
+.--bold-700 { font-weight: 700; }
+.--bold-900 { font-weight: 900; }
+.--color-publisher { color: $color-publisher; }
+
+.--bg-white { background-color: $white; }
+.--bg-light-gray { background-color: $light-gray; }
+.--dark-gray { color: $dark-gray }
+
+.--text-small { font-size: $text-small; }
+.--text-default { font-size: $text-default; }
+.--shadow-bottom { box-shadow: 0px 8px 8px -7px rgba(0, 0, 0, 0.3); }
+
+/*======== COMPONENTS =========*/
+.container {
+  @media(min-width: 1800px) {
+    max-width: 1560px;
+  }  
+}
+
+// SCROLLING MENU
+.c-scrolling {
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  &--vinculo-alunos-modal {
+    height: 15rem;
+  }
+}
+
+.c-dropdown {
+  @extend .dropdown;
+
+  &__toggle {
+    @extend .dropdown-toggle;
+    background: none;
+    border: 0;
+
+    margin-left: .75rem;
+    padding: 0;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::after {
+      margin-left: 0;
+      border: 0;
+    }
+  }
+
+  &-menu {
+    @extend .dropdown-menu;
+
+    &__item {
+      @extend .dropdown-item;
+    }
+  }
+}
+
