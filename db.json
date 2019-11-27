@@ -46,26 +46,50 @@
   "posts": [
     {
       "id": 0,
-      "categoryId": 0,
-      "authorId": 0,
+      "category": { "id": 0, "name": "Pergunta" },      
+      "author": {
+        "id": 1,
+        "fullName": "Marcos Murillo",
+        "email": "murillo.psoft@gmail.com",
+        "city": "Campinas",
+        "avatar": "http://texasapartmentbrokers.com/wp-content/uploads/2016/01/John-Doe.png"
+      },
       "title": "Como fazer tal coisa?",
       "description": "Estou tendo problemas para fazer tal tal tal, como resolver?",
-      "relatedTechnologies": [0, 2, 4]
+      "relatedTechnologies": [
+        { "id": 0, "title": "Node.js", "image": "" },
+        { "id": 2, "title": "React Native", "image": "" },
+        { "id": 4, "title": "Postgres", "image": "" }
+      ]
     },
     {
       "id": 1,
-      "categoryId": 1,
-      "authorId": 2,
+      "category": { "id": 1, "name": "Projeto" },
+      "author": {
+        "id": 2,
+        "fullName": "Alex Marques",
+        "email": "falecomlex@gmail.com",
+        "city": "Americana",
+        "avatar": "https://pickaface.net/gallery/avatar/acrovin559439058dc7f.png"
+      },
       "title": "Como fazer uma API com Node.js e Express.js",
       "description": "Para criar essa API você vai precisar fazer tal e tal...",
-      "relatedTechnologies": [0, 2, 4]
+      "relatedTechnologies": [
+        { "id": 3, "title": "JavaScript", "image": "" }
+      ]
     }
   ],
 
   "comments": [
     {
       "id": 0,
-      "authorId": 1,
+      "author": {
+        "id": 1,
+        "fullName": "Marcos Murillo",
+        "email": "murillo.psoft@gmail.com",
+        "city": "Campinas",
+        "avatar": "http://texasapartmentbrokers.com/wp-content/uploads/2016/01/John-Doe.png"
+      },
       "postId": 0,
       "fatherCommentId": null,
       "comment": "Faz tal tal tal. De nada.",
@@ -74,7 +98,13 @@
     },
     {
       "id": 0,
-      "authorId": 3,
+      "author": {
+        "id": 3,
+        "fullName": "Robson Dourado",
+        "email": "r.dourado007@gmail.com",
+        "city": "Hortolândia",
+        "avatar": "https://pickaface.net/gallery/avatar/unr_sample_161118_2054_ynlrg.png"
+      },
       "postId": 0,
       "fatherCommentId": null,
       "comment": "Tbm tinha essa dúvida e me ajudou, obg.",
@@ -83,7 +113,13 @@
     },
     {
       "id": 0,
-      "authorId": 1,
+      "author": {
+        "id": 1,
+        "fullName": "Marcos Murillo",
+        "email": "murillo.psoft@gmail.com",
+        "city": "Campinas",
+        "avatar": "http://texasapartmentbrokers.com/wp-content/uploads/2016/01/John-Doe.png"
+      },
       "postId": 1,
       "fatherCommentId": null,
       "comment": "Mt legal parabéns.",
@@ -102,15 +138,27 @@
   "courses": [
     {
       "id": 0,
-      "partnerId": 0,
+      "partner": {
+        "id": 0,
+        "name": "Rocketseat",
+        "site": "https://www.rocketseat.com.br",
+        "avatar": "https://yt3.ggpht.com/a/AGF-l7_gRI0RdRC_VNg535o0C21ltP0eTFhi4rjRmw=s288-c-k-c0xffffffff-no-rj-mo"
+      },
       "title": "Curso de EcmaScript 6",
       "description": "Você vai aprender a utilizar as novas features do JavaScript na versão ES 2015.",
-      "relatedTechnologies": [3],
+      "url": "https://rocketseat.com.br",
+      "relatedTechnologies": [{ "id": 3, "title": "JavaScript", "image": "" }],
       "ratingAverage": 4.5,
       "ratings": [
         {
           "id": 0,
-          "authorId": 2,
+          "author": {
+            "id": 2,
+            "fullName": "Alex Marques",
+            "email": "falecomlex@gmail.com",
+            "city": "Americana",
+            "avatar": "https://pickaface.net/gallery/avatar/acrovin559439058dc7f.png"
+          },
           "comment": "Top dms recomendo haha.",
           "starts": 4.5
         }
@@ -119,11 +167,11 @@
   ],
 
   "technologies": [
-    { "id": 0, "title": "Node.js", "image": "" },
-    { "id": 1, "title": "ReactJS", "image": "" },
-    { "id": 2, "title": "React Native", "image": "" },
-    { "id": 3, "title": "JavaScript", "image": "" },
-    { "id": 4, "title": "Postgres", "image": "" },
-    { "id": 5, "title": "MongoDB", "image": "" }
+    { "id": 0, "title": "Node.js", "image": "https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/000/256/thumb/nodejslogo.png" },
+    { "id": 1, "title": "ReactJS", "image": "https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" },
+    { "id": 2, "title": "React Native", "image": "https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" },
+    { "id": 3, "title": "JavaScript", "image": "https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" },
+    { "id": 4, "title": "Postgres", "image": "https://wiki.postgresql.org/images/3/30/PostgreSQL_logo.3colors.120x120.png" },
+    { "id": 5, "title": "MongoDB", "image": "https://kodyclemens.com/wp-content/uploads/2019/06/mdb.png" }
   ]
 }
