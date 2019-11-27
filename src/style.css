@@ -9844,10 +9844,15 @@ body {
 }
 
 .c-tit-primary {
-  margin: 4rem 0 3rem 0;
+  margin: 4rem 0 2rem 0;
 }
 
 .c-avatar-mini img {
   width: 50px;
   height: 50px;
+}
+
+.c-stars svg {
+  color: #FBB03B;
+  font-size: 1.5rem;
 }
