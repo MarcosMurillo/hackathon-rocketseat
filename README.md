@@ -3,6 +3,10 @@ const database = {
     { id: Number, fullName: String, email: String, password: String, avatar: String }
   ],
 
+	usersExperience: [
+		{ id: Number, userId: Number, technologyId: Number, experience: Number }
+	],
+
   partners: [
     { id: Number, name: String, site: String, avatar: String }
   ],
@@ -19,7 +23,16 @@ const database = {
   ],
 
   comments: [
-    { id: Number, authorId: Number, postId: Number, fatherCommentId: Number, comment: String, repoUrl: String, createdAt: Timestamp, updatedAt: Timestamp }
+    { 
+			id: Number, 
+			authorId: Number, 
+			postId: Number, 
+			fatherCommentId: Number, 
+			comment: String, 
+			repoUrl: String, 
+			createdAt: Timestamp, 
+			updatedAt: Timestamp 
+		}
   ],
 
   feedCategories: [
@@ -33,9 +46,12 @@ const database = {
       title: String, 
       description: String,
       relatedTechnologies: [Number],
+			createdAt: Timestamp,
+			updatedAt: Timestamp,
+			expires: Timestamp,
       ratingAverage: Number,
       ratings: [
-        { id: Number, authorId: Number, comment: String, starts: Number }
+        { id: Number, authorId: Number, comment: String, stars: Number }
       ] 
     }
   ],
