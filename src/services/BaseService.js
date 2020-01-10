@@ -5,6 +5,7 @@ class BaseService {
     this.endpoint = `http://localhost:3001/${resource}`
   }
 
+  /** Return a list with all items */
   async list() {
     try {
       const response = await axios.get(this.endpoint)
@@ -15,6 +16,10 @@ class BaseService {
     
   }
 
+  /** 
+   * Return a single item by id 
+   * @param {Integer} id The item id
+   */
   async get(id) {
     try {
       const response = await axios.get(`${this.endpoint}/${id}`)
@@ -25,9 +30,13 @@ class BaseService {
     
   }
 
-  async post(body) {
+  /** 
+   * Create a new item 
+   * @param {Object} data The item data
+   */
+  async post(data) {
     try {
-      const response = await axios.post(this.endpoint, body)
+      const response = await axios.post(this.endpoint, data)
       return response.data
     } catch(e) {
       return e
@@ -35,15 +44,24 @@ class BaseService {
     
   }
 
-  async update(id, body) {
+  /**
+   * Partially or completely updates an item
+   * @param {Integer} id The item id
+   * @param {Object} data The item data
+   */
+  async update(id, data) {
     try {
-      const response = await axios.put(`${this.endpoint}/${id}`, body)
+      const response = await axios.put(`${this.endpoint}/${id}`, data)
       return response.data
     } catch(e) {
       return e
     }
   }
 
+  /**
+   * Deletes an item
+   * @param {Integer} id The item id
+   */
   async delete(id) {
     try{
       const response = await axios.put(`${this.endpoint}/${id}`)
